@@ -1,4 +1,5 @@
 <?php
+
     require_once '../lib/global_lib.php';
 
     $username   =         trim(filter_var($_POST['username'],         FILTER_SANITIZE_SPECIAL_CHARS));
