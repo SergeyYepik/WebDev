@@ -1,5 +1,5 @@
 <?php
-    require './lib/scrts_lib.php';
+    require '../lib/scrts_lib.php';
 
     $host = 'localhost';
     $port = '3306';
