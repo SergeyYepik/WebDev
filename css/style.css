@@ -60,7 +60,7 @@ main{
 }
 
 aside{
-    padding: 20px;
+    padding: 0px;
     float: right;
     width: 20%;
     box-sizing: border-box;
@@ -78,49 +78,22 @@ footer{
     transition: all 500ms ease;
     outline: none;
 }
+
 .logo:hover{
     color: var(--color-text-focused);
     cursor:pointer;
 }
 
-a{
+.nav-menu{
     text-decoration: none;
     color: var(--color-text-normal);
     transition: all 500ms ease;
     outline:none;
 }
 
-a:hover{
+.nav-menu:hover{
     color: var(--color-text-focused);
 } 
-
-/* .nav_btn{
-    background-color: var(--navbar-background-color);    
-    padding: 6px;
-
-    border-radius: 100vh; 
-    outline: none;
-    transition: all 500ms ease;
-}
-
-.nav_btn:hover{
-    background-color: var(--navbar-background-color-focus);
-}
-
-.a_btn{
-    text-decoration: none;
-    color: var(--color-text-normal);
-    padding: 8px;
-
-    border-radius: 100vh;
-    outline: none;   
-    transition: all 500ms ease;
-}
-
-.a_btn:hover{
-    color: var(--color-text-focused); 
-    background-color: var(--navbar-background-color-focus);
-} */
 
 .btn{
     font-size: 18px; 
@@ -323,6 +296,7 @@ aside img {
     margin-top: 20px;
 
     background-color: var(--bg-face-super-light);
+    box-sizing: border-box;
 }
 
 .chat-box{
