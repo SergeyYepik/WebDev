@@ -1,7 +1,6 @@
 <?php
-    require_once '../lib/global_lib.php';
-
-    require '../data/mysql.php';
+    include '../lib/scrts_lib.php';
+    include '../data/mysql.php';
 
     $sql    = "SELECT `username`, `fulltext` FROM `chatmessages` ORDER BY `publishdate` DESC LIMIT 5;";
     $query  = $pdo->prepare($sql);

@@ -8,7 +8,8 @@
     if (mb_strlen($username)                < 2 )    { $error_msg .= "Your name is required.<br>"; echo $error_msg; exit(); }
     if (mb_strlen($fulltext)                < 1 )    { $error_msg .= "Comment is required.<br>"; echo $error_msg; exit(); }
 
-    require '../data/mysql.php';
+    include '../lib/scrts_lib.php';
+    include '../data/mysql.php';
 
     $sql    = "INSERT INTO `chatmessages`(`username`, `fulltext`, `publishdate`) VALUES (?, ?, ?);";
     $query  = $pdo->prepare($sql);

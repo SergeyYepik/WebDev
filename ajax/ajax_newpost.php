@@ -10,7 +10,8 @@
     if (mb_strlen($subtitle)                < 10)    { $error_msg .= "Subtitle is required.<br>"; echo $error_msg; exit(); }
     if (mb_strlen($fulltext)                < 10)    { $error_msg .= "Post is required.<br>"; echo $error_msg; exit(); }
 
-    require '../data/mysql.php';
+    include '../lib/scrts_lib.php';
+    include '../data/mysql.php';
 
     $sql    = "INSERT INTO `posts`(`title`, `subtitle`, `fulltext`, `username`, `publishdate`) VALUES (?, ?, ?, ?, ?);";
     $query  = $pdo->prepare($sql);

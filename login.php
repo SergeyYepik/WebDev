@@ -3,12 +3,12 @@
 <head>
     <?php 
         $page_title = 'Log in';
-        require_once './blocks/head.php';
+        include './blocks/head.php';
     ?>
 </head>
 <body>
     <?php 
-        require_once './blocks/header.php';
+        include './blocks/header.php';
     ?>
     <main>
         <div class="centered-div">
@@ -39,10 +39,10 @@
         </div>
     </main>
     <?php 
-        require_once './blocks/aside.php';
+        include './blocks/aside.php';
     ?>
     <?php 
-        require_once './blocks/footer.php';
+        include './blocks/footer.php';
     ?>
     <script>
         // LOGIN

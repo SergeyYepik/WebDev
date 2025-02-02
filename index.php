@@ -13,7 +13,8 @@
     <main>
         <!-- <div class="centered-div"> -->
             <?php
-                require_once './data/mysql.php';
+                include './lib/scrts_lib.php';
+                include './data/mysql.php';
 
                 $sql    = 'SELECT * FROM `posts` ORDER BY `publishdate` DESC';
                 $query  = $pdo -> query($sql);

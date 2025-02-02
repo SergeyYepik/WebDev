@@ -6,7 +6,8 @@
     // if (mb_strlen($username)            < 2)    { $error_msg .= "User's name is required.<br>"; echo $error_msg; exit(); }
     // if (mb_strlen($password)            < 5)    { $error_msg .= "Password is required.<br>"; echo $error_msg; exit(); }
 
-    require '../data/mysql.php';
+    include '../lib/scrts_lib.php';
+    include '../data/mysql.php';
 
     $sql    = "DELETE FROM `users` WHERE `id` = ?;";
     $query  = $pdo->prepare($sql);

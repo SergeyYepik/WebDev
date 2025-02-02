@@ -4,7 +4,8 @@
     <?php 
         require_once './blocks/head.php';
         
-        require_once './data/mysql.php';
+        include './lib/scrts_lib.php';
+        include './data/mysql.php';
 
         $id = trim(filter_var($_GET['id'], FILTER_SANITIZE_SPECIAL_CHARS));
 

@@ -17,7 +17,8 @@
         <br> 
         <div id="chat">
             <?php
-                require_once './data/mysql.php';
+                include './lib/scrts_lib.php';
+                include './data/mysql.php';
 
                 $sql    = 'SELECT * FROM `chatmessages` ORDER BY `publishdate` DESC LIMIT 5';
                 $query  = $pdo -> query($sql);

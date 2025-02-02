@@ -23,7 +23,9 @@
             <?php
                 echo "<h2>Manage users</h2><br><br>";     
                 
-                require './data/mysql.php';
+                include './lib/scrts_lib.php';
+                include './data/mysql.php';
+                
                 $sql    = "SELECT `id`, `username` FROM `users`;";
                 $query  = $pdo->prepare($sql);
                 $query  -> execute([]);

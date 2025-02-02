@@ -13,7 +13,8 @@
     if (mb_strlen($confirm_password)    < 5)    { $error_msg .= "Password confirmation is required.<br>"; echo $error_msg; exit(); }
     if ($password !== $confirm_password)        { $error_msg .= "Passwords don't match.<br>"; echo $error_msg; exit(); }
 
-    require '../data/mysql.php';
+    include '../lib/scrts_lib.php';
+    include '../data/mysql.php';
 
     $sql    = "INSERT INTO `users`(`username`, `login`, `email`, `password`) VALUES (?, ?, ?, ?);";
     $query  = $pdo->prepare($sql);
