@@ -6,3 +6,9 @@ Used technologies:
 2. JavaScript
 3. JQuery + AJAX
 4. HTML + CSS
+
+and certainly
+
+5. Git
+
+:smile:
