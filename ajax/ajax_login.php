@@ -1,5 +1,5 @@
 <?php
-    require_once '../lib/global_lib.php';
+    //require_once '../lib/global_lib.php';
 
     $username =         trim(filter_var($_POST['username'],         FILTER_SANITIZE_SPECIAL_CHARS));
     $password =         trim(filter_var($_POST['password'],         FILTER_SANITIZE_SPECIAL_CHARS));
@@ -8,7 +8,7 @@
     if (mb_strlen($username)            < 2)    { $error_msg .= "User's name is required.<br>"; echo $error_msg; exit(); }
     if (mb_strlen($password)            < 5)    { $error_msg .= "Password is required.<br>"; echo $error_msg; exit(); }
 
-    require '../data/mysql.php';
+    //require '../data/mysql.php';
 
     $sql    = "SELECT `id` FROM `users` WHERE BINARY `username` = ? AND BINARY `password` = ?;";
     $query  = $pdo->prepare($sql);

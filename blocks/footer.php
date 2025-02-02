@@ -60,5 +60,5 @@
         function startChat(){
             setInterval(updateChat, 3000);
         }
-        startChat();
+        //startChat();
 </script>
