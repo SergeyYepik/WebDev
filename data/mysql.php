@@ -5,7 +5,7 @@
     $dbname = 'phplsns';
 
     $user = 'root';
-    $pass = MYSQLPWD; // указать нужное
+    $pass = MYSQL_PWD; // указать нужное
 
     $dsn = "mysql:host=$host;dbname=$dbname;port=$port";
     $pdo = new PDO($dsn, $user, $pass);

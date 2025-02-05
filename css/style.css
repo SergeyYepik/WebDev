@@ -370,3 +370,16 @@ aside img {
     text-align: center;
 }
 
+.lefted-div{
+    width: 100%;
+    margin-top: 1vh;
+
+    text-align:left;
+}
+
+.righted-div{
+    width: 100%;
+    margin-top: 1vh;
+
+    text-align:right;
+}

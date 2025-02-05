@@ -16,7 +16,7 @@
             <br>
             <br>
             <br>            
-            <a href="<?=SITE_ROOT?>" class="btn">Back</a>
+            <button class="btn" onclick="location.href = &quot;<?=SITE_ROOT?>&quot;;">Back</a>
         </div>
     </main>
     <?php 
