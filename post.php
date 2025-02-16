@@ -73,7 +73,7 @@
             <br>
             <br>
             <br>
-            <a href='<?=SITE_ROOT?>' class='btn'>Back to main page</a>
+            <button class="btn" onclick="location.href = &quot;<?=SITE_ROOT?>&quot;">Back to main page</button>
         </div>
     </main>
     <?php 

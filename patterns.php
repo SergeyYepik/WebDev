@@ -23,9 +23,9 @@
                 }
 
                 class ZipFile implements CreateFiles {
-                    public $file; 
+                    public mixed $file;
 
-                    function createFile($file_name){
+                    function createFile($file_name) : void{
                         $this->file = "http://web.dev/get?file=$file_name.zip";
                     }
                 }
@@ -221,17 +221,15 @@
                 echo "<h4><em>You Aren’t Gonna Need It.</em></h4><br>";
                 echo "<h2>SOLID</h2>";
                 echo "<h4><em>Single responsibility, Open/Closed, Liskov substitution, Interface segregation, and Dependency inversion.</em></h4><br>";
-                echo "<br><h4><em>Single responsibility.</em> Using classes <em>EchoLogError</em> and <em>ConsoleLogError</em> in class <em>Db</em> disigned by <em>Single responsibility principle</em>.</h4><br>";
+                echo "<br><h4><em>Single responsibility.</em> Using classes <em>EchoLogError</em> and <em>ConsoleLogError</em> in class <em>Db</em> designed by <em>Single responsibility principle</em>.</h4><br>";
                 echo "<br><h4><em>Open/Closed.</em> Using interface <em>ILog</em> for extending properties of logging designed by <em>Open/Closed responsibility principle</em>.</h4><br>";
-                echo "<br><h4><em>Liskov substitution.</em> Class <em>EchoLogErrorAndAlert</em> in class <em>Db</em> disigned by <em>Liskov substitution principle</em> course it gives expected response.</h4><br>";
+                echo "<br><h4><em>Liskov substitution.</em> Class <em>EchoLogErrorAndAlert</em> in class <em>Db</em> designed by <em>Liskov substitution principle</em> course it gives expected response.</h4><br>";
                 echo "<br><h4><em>Interface segregation.</em> Interface <em>ILogAlert</em> for extending properties of logging designed by <em> Interface segregation principle</em>.</h4><br>";
                 echo "<br><h4><em>Dependency inversion.</em> Class <em>CommonLogError</em> designed by <em> Dependency inversion principle</em>.</h4><br>";
-
-
             ?>
         </div>
         <div class="centered-div">
-            <button class="btn" onclick="location.href = &quot;<?=SITE_ROOT?>&quot;;">Back</button>
+            <button class="btn" onclick="location.href = &quot;<?=SITE_ROOT?>&quot;">Back</button>
             <br>
             <br>
         </div>

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php 
-        $page_title = 'Main page';
-        require_once './blocks/head.php';
+    <?php
+        $page_title= 'Main page';
+        include_once 'blocks/head.php';
     ?>
 </head>
 <body>
     <?php 
-        require_once './blocks/header.php';
+        require_once 'blocks/header.php';
     ?>
     <main>
         <?php
-            include './lib/scrts_lib.php';
-            include './data/mysql.php';
+            include 'lib/scrts_lib.php';
+            include 'data/mysql.php';
 
             $sql    = 'SELECT * FROM `posts` ORDER BY `publishdate` DESC';
             $query  = $pdo -> query($sql);
@@ -29,10 +29,10 @@
         ?>
     </main>
     <?php 
-        require_once './blocks/aside.php';
+        require_once 'blocks/aside.php';
     ?>
     <?php 
-        require_once './blocks/footer.php';
+        require_once 'blocks/footer.php';
     ?>
     <script>
         function showPostById(id){

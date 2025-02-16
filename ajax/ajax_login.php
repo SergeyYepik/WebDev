@@ -11,21 +11,26 @@
     include '../lib/scrts_lib.php';
     include '../data/mysql.php';
 
-    $sql    = "SELECT `id` FROM `users` WHERE BINARY `username` = ? AND BINARY `password` = ?;";
+    //$sql    = "SELECT `id` FROM `users` WHERE BINARY `username` = ? AND BINARY `password` = ?;";
+    $sql    = "SELECT `id`, `password` FROM `users` WHERE BINARY `username` = ?;";
     $query  = $pdo->prepare($sql);
     
-    $salt   = "@#$)({}()&*^";
+    //$salt   = "@#$)({}()&*^";
 
-    $query  -> execute([$username, md5($salt.$password)]);
+    //$query  -> execute([$username, md5($salt.$password)]);
+    $query  -> execute([$username]);
 
-    if ($query -> rowCount() == 0){   
-        echo   "Invalid login atttempt.";
-    }
-    else{
+    if ($query -> rowCount() == 0){
+        echo   "Invalid login attempt.";
+    } else {
         $user = $query->fetch(PDO::FETCH_OBJ);
 
-        setcookie('isSignedIn',     true,       time() + 3600 * 24, '/');
-        setcookie('signedUserName', $username,  time() + 3600 * 24, '/');
-        setcookie('signedUserId', $user -> id,  time() + 3600 * 24, '/');
-        echo    "Done";
+        if (password_verify($password, $user->password)) {
+            setcookie('isSignedIn', true, time() + 3600 * 24, '/');
+            setcookie('signedUserName', $username, time() + 3600 * 24, '/');
+            setcookie('signedUserId', $user->id, time() + 3600 * 24, '/');
+            echo "Done";
+        } else {
+            echo   "Invalid login attempt.";
+        }
     }

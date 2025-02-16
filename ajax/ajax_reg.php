@@ -19,9 +19,10 @@
     $sql    = "INSERT INTO `users`(`username`, `login`, `email`, `password`) VALUES (?, ?, ?, ?);";
     $query  = $pdo->prepare($sql);
     
-    $salt   = "@#$)({}()&*^";
+    //$salt   = "@#$)({}()&*^";
 
-    $query  -> execute([$username, $username, $email, md5($salt.$password)]);
+    //$query  -> execute([$username, $username, $email, md5($salt.$password)]);
+    $query  -> execute([$username, $username, $email, password_hash($password, PASSWORD_DEFAULT )]);
 
     echo    "Done";
 

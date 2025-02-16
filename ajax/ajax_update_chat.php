@@ -2,6 +2,11 @@
     include '../lib/scrts_lib.php';
     include '../data/mysql.php';
 
+    $week_ago = time() - ( 7 * 24 *3600);
+    $sql    = "DELETE FROM `chatmessages` WHERE `publishdate` < ?;";
+    $query  = $pdo->prepare($sql);
+    $query  -> execute([$week_ago]);
+
     $sql    = "SELECT `username`, `fulltext` FROM `chatmessages` ORDER BY `publishdate` DESC LIMIT 5;";
     $query  = $pdo->prepare($sql);
     $query  -> execute([]);

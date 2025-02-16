@@ -1,16 +1,16 @@
 <?php
     
-    class Articles{
+    class Vocabular{
         private $_db = null;
 
         public function __construct()
         {
             include './data/db.php';
-            $this->_db = DbMySql::getInstance();
+            $this->_db = DbMySqlForSaferCare::getInstance();
         }
 
-        public function getAll(){
-            $result = $this->_db->query('SELECT * FROM `chatmessages`;');
+        public function getAllDescription(){
+            $result = $this->_db->query('SELECT `ServiceDescription` FROM `todoservices`;');
             return $result->fetchAll(PDO::FETCH_ASSOC);
         }
     }

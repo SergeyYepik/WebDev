@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php 
-        $page_title = 'Usefull';
+        $page_title = 'Usefully';
         require_once './blocks/head.php';
     ?>
 </head>
@@ -40,6 +40,7 @@
                 echo "<b>\$_SERVER['SERVER_PROTOCOL'] - </b>" . $_SERVER['SERVER_PROTOCOL'] . "<br><br>";
                 echo "<b>\$_SERVER['PHP_SELF'] - </b>" . $_SERVER['PHP_SELF'] . "<br><br>";
                 echo "<b>\$_SERVER['REQUEST_URI'] - </b>" . $_SERVER['REQUEST_URI'] . "<br><br>";
+                echo "<b>\$_SERVER['HTTPS'] - </b>" . $_SERVER['HTTPS'] . "<br><br>";
 
                 echo '0' == null;
 
@@ -132,6 +133,10 @@
             //echo $point->y;
 
             echo "Point = $point" . "<br><br>";
+
+            echo "<b>chr(0x00a0) = </b> '" . chr($point->x) . "'" . "<br><br>";
+            echo "<b>mb_chr(0x00a0) = </b> '" . mb_chr($point->x) . "'" . "<br><br>";
+
 
 //            try {
 //                if (mt_rand(0, 1)) {
